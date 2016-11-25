@@ -1,0 +1,14 @@
+$curl -i -X POST -H "Content-Type: application/json" -d'{"bugkey_id":"2681","account":"fulisheng","password":"1234567890"}' 127.0.0.1:5015/agent/1.0/zentao
+
+curl -v \
+    -F "r=pro" \
+    -F "g=com_acme_widgets" \
+    -F "a=disconf-tool" \
+    -F "v=2.6.28" \
+    -F "p=jar" \
+    -F "file=@./disconf-tool-2.6.28.jar" \
+    -u admin:admin123 \
+    http://192.168.23.202:9002/nexus/service/local/artifact/maven/content
+ DELETE -u admin:admin123 http://192.168.23.202:9002/nexus/content/repositories/pro/com_acme_widgets/disconf-tool/2.6.28/ 
+ curl -X cp -u admin:admin123 http://192.168.23.202:9002/nexus/content/repositories/pro/com_acme_widgets/disconf-tool2/2.6.29/ 
+ curl -i -X POST -H "Content-Type: application/json" -d'{"username":"fulisheng","password":"1234567890"}' http://192.168.23.238:5016/agent/nexus/1.0/meta  
