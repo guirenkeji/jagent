@@ -1,3 +1,6 @@
+251≤‚ ‘ª∑æ≥
+/home/guiren/script
+
 $curl -i -X POST -H "Content-Type: application/json" -d'{"bugkey_id":"2681","account":"fulisheng","password":"1234567890"}' 127.0.0.1:5015/agent/1.0/zentao
 
 curl -v \

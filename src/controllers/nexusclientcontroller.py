@@ -53,6 +53,7 @@ def pushToNexus ():
     return 'ok'
 @nexus.route('/agent/nexus/1.0/pull',methods=['POST'])
 def pullToLocal ():
+
     version = request.josn['version']
     username = request.json['username']
     password = request.json['password']
